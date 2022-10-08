@@ -1,0 +1,33 @@
+/* Global Colors */
+:root {
+    --c-blue: #3FBBFA;
+    --c-black: #000000;
+    --c-white: #ffffff;
+    /* Future */
+    --c-green: limegreen;
+    /* Present */
+    --c-orange: orange;
+    /* Past */
+    --c-grey: #d3d3d3;
+}
+
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: var(--c-black);
+    border-radius: 0;
+    border-bottom: 3px solid var(--c-black);
+    background-color: var(--c-blue);
+
+}
+
+.jumbotron h1 {
+    text-shadow: 1px 1px white;
+}
+
+.jumbotron #currentDate {
+    font-weight: bold;
+    font-size: larger;
+    text-shadow: 1px 1px white;
+}
