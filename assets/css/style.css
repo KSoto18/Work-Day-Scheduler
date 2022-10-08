@@ -1,6 +1,6 @@
 /* Global Colors */
 :root {
-    --c-blue: #3FBBFA;
+    --c-purple: rgb(128, 115, 218);
     --c-black: #000000;
     --c-white: #ffffff;
     /* Future */
@@ -18,7 +18,7 @@
     color: var(--c-black);
     border-radius: 0;
     border-bottom: 3px solid var(--c-black);
-    background-color: var(--c-blue);
+    background-color: var(--c-purple);
 
 }
 
@@ -62,13 +62,11 @@
     color: var(--c-white);
 }
 
-
-
 .saveBtn {
     border: 1px solid var(--c-black);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: var(--c-blue);
+    background-color: var(--c-purple);
     color: var(--c-white);
 }
 
@@ -77,13 +75,10 @@
     color: var(--c-white);
 }
 
-.description{
+.description {
     white-space: pre-wrap;
-  }
+}
 
 textarea {
     resize: none;
-    color: #000000;
-    border-left: 1px solid black;
-    padding: 10px;
-  }
+}
