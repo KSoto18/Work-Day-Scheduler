@@ -31,3 +31,59 @@
     font-size: larger;
     text-shadow: 1px 1px white;
 }
+
+.row {
+    white-space: pre-wrap;
+    height: 80px;
+    margin: 2px;
+}
+
+
+.hour {
+    background-color: var(--c-white);
+    color: var(--c-black);
+    border-top: 1px solid var(--c-black);
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.future {
+    background-color: var(--c-green);
+    color: var(--c-white);
+}
+
+.present {
+    background-color: var(--c-orange);
+    color: var(--c-white);
+}
+
+.past {
+    background-color: var(--c-grey);
+    color: var(--c-white);
+}
+
+
+
+.saveBtn {
+    border: 1px solid var(--c-black);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--c-blue);
+    color: var(--c-white);
+}
+
+.saveBtn i:hover {
+    font-size: 200%;
+    color: var(--c-white);
+}
+
+.description{
+    white-space: pre-wrap;
+  }
+
+textarea {
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
+  }
