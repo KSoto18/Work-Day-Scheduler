@@ -39,4 +39,4 @@ THEN the saved events persist
 
 # Link to Application
 
-[Application Link](https://ksoto18.github.io/Work-Day-Scheduler/)
+[Application Link](https://ksoto18.github.io/Work-day-Scheduler/)
