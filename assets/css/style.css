@@ -34,7 +34,6 @@
 
 .row {
     white-space: pre-wrap;
-    height: 80px;
     margin: 2px;
 }
 
@@ -82,3 +81,13 @@
 textarea {
     resize: none;
 }
+
+/* Style for mobile devices */
+@media (max-width: 500px) { 
+    .hour {
+        margin-top: 5px;   
+    }
+
+}
+
+    
