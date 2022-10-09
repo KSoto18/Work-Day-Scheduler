@@ -2,7 +2,7 @@
 var timeBlock = $("textarea[id^='hour']");
 var saveBtn = $(".saveBtn");
 var toDo;
-var newToDo = [];
+var newToDo;
 
 //Jumbotron Header
 function currentDate() {
@@ -12,6 +12,16 @@ function currentDate() {
 
 currentDate();
 
+//keeps information on table (NOT WORKING)
+function getToDo() {
+    var newToDo = localStorage.getItem(toDo);
+    console.log(toDo);
+
+    newToDo = JSON.stringify(toDo);
+    console.log(newToDo);
+    
+};
+
 //Save button function
 function saveButton(event) {
     event.preventDefault();
@@ -19,24 +29,14 @@ function saveButton(event) {
     toDo = $(this).siblings("textarea[id^='hour']").val();
 
     storeTodo();
-
-    //keeps information on table (NOT WORKING)
-    function getToDo() {
-        localStorage.getItem(toDo);
-        console.log(toDo);
-
-        $(this).siblings("textarea[id^='hour']").text(toDo);
-    }
-
     getToDo();
 
 };
 
 // Stores the hour and to do to Local Storage
 function storeTodo() {
-    localStorage.setItem(hour + " 'o Clock", "To do: " + toDo);
+    localStorage.setItem(hour, toDo);
 };
-
 
 
 // Compares times to change colors for present(orange), future(green) or past(grey)
