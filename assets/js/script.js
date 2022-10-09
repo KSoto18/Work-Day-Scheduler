@@ -1,8 +1,7 @@
 //Variables
 var timeBlock = $("textarea[id^='hour']");
 var saveBtn = $(".saveBtn");
-var toDo;
-var newToDo;
+
 
 //Jumbotron Header
 function currentDate() {
@@ -11,33 +10,43 @@ function currentDate() {
 };
 
 currentDate();
+getToDo();
 
-//keeps information on table (NOT WORKING)
+// Stores the hour and to do to Local Storage
+function storeTodo() {
+    let hour9 = $("#hour-9").val();
+    let hour10 = $("#hour-10").val();
+    let hour11 = $("#hour-11").val();
+    let hour12 = $("#hour-12").val();
+    let hour13 = $("#hour-13").val();
+    let hour14 = $("#hour-14").val();
+    let hour15 = $("#hour-15").val();
+
+    localStorage.setItem("hour-9", hour9);
+    localStorage.setItem("hour-10", hour10);
+    localStorage.setItem("hour-11", hour11);
+    localStorage.setItem("hour-12", hour12);
+    localStorage.setItem("hour-13", hour13);
+    localStorage.setItem("hour-14", hour14);
+    localStorage.setItem("hour-15", hour15);
+};
+
+//keeps information on table 
 function getToDo() {
-    var newToDo = localStorage.getItem(toDo);
-    console.log(toDo);
+    $("#hour-9").val(localStorage.getItem("hour-9"));
+    $("#hour-10").val(localStorage.getItem("hour-10"));
+    $("#hour-11").val(localStorage.getItem("hour-11"));
+    $("#hour-12").val(localStorage.getItem("hour-12"));
+    $("#hour-13").val(localStorage.getItem("hour-13"));
+    $("#hour-14").val(localStorage.getItem("hour-14"));
+    $("#hour-15").val(localStorage.getItem("hour-15"));
 
-    newToDo = JSON.stringify(toDo);
-    console.log(newToDo);
-    
 };
 
 //Save button function
 function saveButton(event) {
-    event.preventDefault();
-    hour = $(this).attr("id").split("-")[1];
-    toDo = $(this).siblings("textarea[id^='hour']").val();
-
     storeTodo();
-    getToDo();
-
 };
-
-// Stores the hour and to do to Local Storage
-function storeTodo() {
-    localStorage.setItem(hour, toDo);
-};
-
 
 // Compares times to change colors for present(orange), future(green) or past(grey)
 function blockColors() {
